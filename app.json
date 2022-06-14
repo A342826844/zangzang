@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "藏藏",
+    "slug": "zang-zang",
+    "version": "1.0.0-alpha.38",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "bog",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FC88B3"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 60000,
+      "checkAutomatically": "ON_ERROR_RECOVERY"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "fun.tiamed"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#FC88B3"
+      },
+      "package": "fun.tiamed",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_MEDIA_LOCATION",
+        "CAMERA"
+      ],
+      "softwareKeyboardLayoutMode": "resize",
+      "allowBackup": true
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "description": "BOG岛第三方客户端",
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": "true"
+        }
+      ],
+      [
+        "./plugins/withGradleProperties",
+        {
+          "AsyncStorage_db_size_in_MB": "500"
+        }
+      ]
+    ],
+    "githubUrl": "https://github.com/tiamed/bog-nimingban",
+    "packagerOpts": {
+      "sourceExts": [
+        "cjs"
+      ]
+    }
+  }
+}
